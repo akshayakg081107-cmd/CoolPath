@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoolPath — Heat-aware walking prototype</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header><div class="brand">☀ CoolPath</div><div>Heat-aware route comparison · Prototype</div></header>
+<main>
+  <section class="intro">
+    <h1>Walk with heat in mind.</h1>
+    <p>Compare a shortest walking route with an option that weighs estimated heat exposure, shade and mapped cooling stops.</p>
+    <div class="warning">Demo data only. Scores are illustrative, not live weather or a medical/safety guarantee.</div>
+  </section>
+  <section class="controls card">
+    <label>Start <select id="start"></select></label>
+    <label>Destination <select id="end"></select></label>
+    <button id="go">Compare routes</button>
+  </section>
+  <section id="status" aria-live="polite"></section>
+  <section id="routes" class="routes"></section>
+  <section class="card">
+    <h2>How the score works</h2>
+    <p>Each street segment has a sample heat-risk value (0–1), estimated shade percentage, distance and an optional cooling-stop flag. The route finder ranks distance and a transparent distance-weighted heat/shade cost. These are sample values for demonstrating the method.</p>
+  </section>
+  <footer>Open-source student prototype · Team Dwishakti · CoolPath</footer>
+</main>
+<script src="/static/app.js"></script>
+</body></html>
